@@ -69,11 +69,11 @@ export default function Textform(props) {
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" style={{ backgroundColor: props.mode === 'light' ? 'white' : 'black', color: props.mode === 'light' ? 'black' : 'white' }}></textarea>
                 </div>
                 <button className="btn btn-success my-1" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-success mx-3 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+                <button className="btn btn-success mx-2 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
                 <button className="btn btn-success my-1" onClick={handleClearClick}>Clear text</button>
-                <button className="btn btn-success mx-3 my-1" onClick={handleReverseClick}>Reverse words</button>
+                <button className="btn btn-success mx-2 my-1" onClick={handleReverseClick}>Reverse words</button>
                 <button className="btn btn-success my-1" onClick={handleCopyClick}>Copy text</button>
-                <button className="btn btn-success mx-3 my-1" onClick={handleExtraSpaces}>Remove extra spaces</button>
+                <button className="btn btn-success mx-2 my-1" onClick={handleExtraSpaces}>Remove extra spaces</button>
                 <button className="btn btn-success mx my-1" onClick={handleReverseTextClick}>Reverse text</button>
             </div>
             <div className="container my-3" style={{ color:props.mode === 'light' ? 'black' : 'white' }}>
