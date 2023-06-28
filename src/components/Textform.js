@@ -68,20 +68,20 @@ export default function Textform(props) {
                     <label htmlFor="myBox" className="form-label"><h2>{props.heading}</h2></label>
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" style={{ backgroundColor: props.mode === 'light' ? 'white' : 'black', color: props.mode === 'light' ? 'black' : 'white' }}></textarea>
                 </div>
-                <button className="btn btn-success" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-success mx-3" onClick={handleLoClick}>Convert to Lowercase</button>
-                <button className="btn btn-success" onClick={handleClearClick}>Clear text</button>
-                <button className="btn btn-success mx-3" onClick={handleReverseClick}>Reverse words</button>
-                <button className="btn btn-success" onClick={handleCopyClick}>Copy text</button>
-                <button className="btn btn-success mx-3" onClick={handleExtraSpaces}>Remove extra spaces</button>
-                <button className="btn btn-success mx" onClick={handleReverseTextClick}>Reverse text</button>
+                <button className="btn btn-success my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className="btn btn-success mx-3 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+                <button className="btn btn-success my-1" onClick={handleClearClick}>Clear text</button>
+                <button className="btn btn-success mx-3 my-1" onClick={handleReverseClick}>Reverse words</button>
+                <button className="btn btn-success my-1" onClick={handleCopyClick}>Copy text</button>
+                <button className="btn btn-success mx-3 my-1" onClick={handleExtraSpaces}>Remove extra spaces</button>
+                <button className="btn btn-success mx my-1" onClick={handleReverseTextClick}>Reverse text</button>
             </div>
             <div className="container my-3" style={{ color:props.mode === 'light' ? 'black' : 'white' }}>
                 <h3>Your Text Summary</h3>
-                <p><b>{text==="Enter text here"||text===""?"0":text.split(/[ ]+/).length}</b> words and <b>{text==="Enter text here"?"0":text.split(/[ ]+/).join("").length}</b> characters</p>
+                <p><b>{text.split(" ").filter((element)=>{return element.length!==0}).length}</b> words and <b>{text.length}</b> characters</p>
                 <p><b>{text==="Enter text here"||text===""?"0.000":(text.split(/[ ]+/).length) * 0.008}</b> Minutes to read</p>
                 <h4>Preview</h4>
-                <p>{text==="Enter text here"||text===""?"Enter Some text to preview":text}</p>
+                <p>{text.length===0?"Enter Some text to preview":text}</p>
             </div>
         </>
     )
