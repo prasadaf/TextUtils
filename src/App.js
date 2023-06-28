@@ -40,7 +40,7 @@ function App() {
   }
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
@@ -49,10 +49,10 @@ function App() {
             <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
           </Routes> 
       </div>
-      </BrowserRouter>
-      {/* <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
+      </BrowserRouter> */}
+      <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
-      <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /> */}
+      <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
     </>
   );
 }
